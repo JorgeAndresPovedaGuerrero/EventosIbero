@@ -4,17 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos</title>
-    <link rel="stylesheet" href="/style_eventos.css">
+    <link rel="stylesheet" href="style_eventos.css">
 </head>
 <body>
     <div class="container">
-        <h2>Crear Evento</h2>
-        <input type="text" id="nombre" placeholder="Nombre del evento">
-        <input type="date" id="fecha">
-        <input type="text" id="lugar" placeholder="Lugar">
-        <button onclick="crearEvento()">Crear</button>
-        <button onclick="cerrarSesion()" style="background: red; margin: top 10px;">Cerrar Sesion</button>
-        <div id="eventos"></div>
+        <div class="layout-wrapper">
+            <!-- Columna izquierda - Formulario -->
+            <div class="left-column">
+                <h2>Crear Evento</h2>
+                <input type="text" id="nombre" placeholder="Nombre del evento">
+                <input type="date" id="fecha">
+                <input type="text" id="lugar" placeholder="Lugar">
+                <button onclick="crearEvento()">Crear</button>
+                <button onclick="cerrarSesion()" style="background: red;">Cerrar Sesión</button>
+            </div>
+            
+            <!-- Columna derecha - Lista de eventos -->
+            <div class="right-column">
+                <h2>Listado de Eventos</h2>
+                <div id="eventos"></div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 Sistema de Gestión de Eventos Comunitarios | Desarrollado por Tu Empresa</p>
+        </div>
     </div>
     <script src="script_eventos.js"></script>
 </body>
